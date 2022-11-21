@@ -42,6 +42,6 @@ public class RockPaperScissors
             JOptionPane.showMessageDialog(null, "You picked " + userChoice + ". Your opponent picked " + compChoice + ".");
             JOptionPane.showMessageDialog(null, "You Win!");
         }
-        JOptionPane.showMessageDialog(null, args, computerInput);
+        JOptionPane.showMessageDialog(null, computerInput);
     }
 }
