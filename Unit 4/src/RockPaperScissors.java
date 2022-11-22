@@ -7,7 +7,7 @@ public class RockPaperScissors
         int userInput = Integer.parseInt(JOptionPane.showInputDialog("Enter 1 for rock, 2 for paper, or 3 for scissors"));
         int compInput = (int)(Math.random() * (3-1+1) + 1);
         String userChoice = " ";
-        String compChoice = " ";
+        String opponent = " ";
         if(userInput > 3)
         {
             JOptionPane.showMessageDialog(null,"I said 1, 2, or 3 dumbass");
@@ -26,22 +26,51 @@ public class RockPaperScissors
         }
         else if(compInput == 1)
         {
-            compChoice = "Rock";
+        	opponent = "Rock";
         }
         else if(compInput == 2)
         {
-            compChoice = "Paper";
+        	opponent = "Paper";
         }
         else if(compInput == 3)
         {
-            compChoice = "Scissors";
+            opponent = "Scissors";
         }
 
         if(userInput == 1 && compInput == 2)
         {
-            JOptionPane.showMessageDialog(null, "You picked " + userChoice + ". Your opponent picked " + compChoice + ".");
+            JOptionPane.showMessageDialog(null, "You picked " + userChoice + ". Your opponent picked paper.");
+            JOptionPane.showMessageDialog(null, "You Loose!");
+        }
+        if(userInput == 1 && compInput == 3)
+        {
+            JOptionPane.showMessageDialog(null, "You picked " + userChoice + ". Your opponent picked scissors." );
             JOptionPane.showMessageDialog(null, "You Win!");
         }
-        JOptionPane.showMessageDialog(null, compInput);
+        if(userInput == 2 && compInput == 1)
+        {
+            JOptionPane.showMessageDialog(null, "You picked " + userChoice + ". Your opponent picked rock.");
+            JOptionPane.showMessageDialog(null, "You Win!");
+        }
+        if(userInput == 2 && compInput == 3)
+        {
+            JOptionPane.showMessageDialog(null, "You picked " + userChoice + ". Your opponent picked scissors.");
+            JOptionPane.showMessageDialog(null, "You Loose!");
+        }
+        if(userInput == 3 && compInput == 1)
+        {
+            JOptionPane.showMessageDialog(null, "You picked " + userChoice + ". Your opponent picked rock.");
+            JOptionPane.showMessageDialog(null, "You Loose!!");
+        }
+        if(userInput == 3 && compInput == 2)
+        {
+            JOptionPane.showMessageDialog(null, "You picked " + userChoice + ". Your opponent picked paper.");
+            JOptionPane.showMessageDialog(null, "You Win!");
+        }
+        if(userInput == compInput)
+        {
+            JOptionPane.showMessageDialog(null, "You picked " + userChoice + ". Your opponent picked " + userChoice + ".");
+            JOptionPane.showMessageDialog(null, "It's a tie!");
+        }
     }
 }
