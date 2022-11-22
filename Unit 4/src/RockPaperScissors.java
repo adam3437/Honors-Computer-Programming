@@ -5,7 +5,7 @@ public class RockPaperScissors
     public static void main(String[] args)
     {
         int userInput = Integer.parseInt(JOptionPane.showInputDialog("Enter 1 for rock, 2 for paper, or 3 for scissors"));
-        int computerInput = (int)(Math.random() * (3-1+1) + 1);
+        int compInput = (int)(Math.random() * (3-1+1) + 1);
         String userChoice = " ";
         String compChoice = " ";
         if(userInput > 3)
@@ -24,24 +24,24 @@ public class RockPaperScissors
         {
             userChoice = "Scissors";
         }
-        else if(computerInput == 1)
+        else if(compInput == 1)
         {
             compChoice = "Rock";
         }
-        else if(computerInput == 2)
+        else if(compInput == 2)
         {
             compChoice = "Paper";
         }
-        else if(computerInput == 3)
+        else if(compInput == 3)
         {
             compChoice = "Scissors";
         }
 
-        if(userInput == 1 && computerInput == 2)
+        if(userInput == 1 && compInput == 2)
         {
             JOptionPane.showMessageDialog(null, "You picked " + userChoice + ". Your opponent picked " + compChoice + ".");
             JOptionPane.showMessageDialog(null, "You Win!");
         }
-        JOptionPane.showMessageDialog(null, computerInput);
+        JOptionPane.showMessageDialog(null, compInput);
     }
 }
