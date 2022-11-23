@@ -1,5 +1,6 @@
 /Unit 4/src/sandbox.java
 /Unit 3 - if-else/src/Sandbox.java
 /Unit 2/src/Sandbox.java
-.gitignore
+*.gitignore
 *.iml
+*.xml
