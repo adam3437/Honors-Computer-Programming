@@ -18,7 +18,7 @@ public class Login
             if(user.equals(username) && pass.equals(password))
             {
                 System.out.println("Welcome " + user);
-                run = false;
+                run = false;    
             }
             else
             {
@@ -30,6 +30,7 @@ public class Login
                 System.out.println("You have exceeded the number of tries");
                 run = false;
             }
+            input.close();
         }
     }
 }
