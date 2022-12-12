@@ -15,6 +15,10 @@ public class InBetween
             {
                 System.out.print(i + " ");
             }
+            if (num2 - num1 == 1)
+            {
+                System.out.println("There are no integers between the entered values.");
+            }
         }
         else if (num1 > num2)
         {
