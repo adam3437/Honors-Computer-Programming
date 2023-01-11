@@ -1,3 +1,9 @@
+/**
+ * You know what a Magic 8 Ball is
+ * 
+ * @author Spy_Gaming_TF2 
+ * @version 1/9/2023
+ */
 import javax.swing.JOptionPane;
 
 public class Magic_8_Ball 
