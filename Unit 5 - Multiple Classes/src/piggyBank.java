@@ -71,5 +71,55 @@ public class piggyBank
     public int getHundreds()
     {
         return hundreds;
-    }  
+    } 
+    //allow for values to be changed using set coin name
+    public void setPennies(int thePennies)
+    {
+        pennies = thePennies;
+    }
+    public void setNickels(int theNickels)
+    {
+        nickels = theNickels;
+    }
+    public void setDimes(int theDimes)
+    {
+        dimes = theDimes;
+    }
+    public void setQuarters(int theQuarters)
+    {
+        quarters = theQuarters;
+    }
+    public void setOnes(int theOnes)
+    {
+        ones = theOnes;
+    }
+    public void setFives(int theFives)
+    {
+        fives = theFives;
+    }
+    public void setTens(int theTens)
+    {
+        tens = theTens;
+    }
+    public void setTwenties(int theTwenties)
+    {
+        twenties = theTwenties;
+    }
+    public void setFifties(int theFifties)
+    {
+        fifties = theFifties;
+    }
+    public void setHundreds(int theHundreds)
+    {
+        hundreds = theHundreds;
+    }
+    //toString method to print out the contents of the piggy bank 
+    public String contents()
+    {
+        return "Pennies: " + pennies + "\tNickels: " + nickels + "\tDimes: " + dimes + "\tQuarters: " + quarters + "\tOnes: " + ones + "\tFives: " + fives + "\tTens: " + tens + "\tTwenties: " + twenties + "\tFifties: " + fifties + "\tHundreds: " + hundreds + "\tTotal Value: " + totalValue() + "\n";
+    }
+    public double totalValue()
+    {
+        return pennies * 0.01 + nickels * 0.05 + dimes * 0.10 + quarters * 0.25 + ones * 1.00 + fives * 5.00 + tens * 10.00 + twenties * 20.00 + fifties * 50.00 + hundreds * 100.00;
+    }
 }
