@@ -19,7 +19,8 @@ public class myBank
         myBank.setTens(Integer.parseInt(JOptionPane.showInputDialog("How many tens do you have?")));
         myBank.setTwenties(Integer.parseInt(JOptionPane.showInputDialog("How many twenties do you have?")));
         myBank.setFifties(Integer.parseInt(JOptionPane.showInputDialog("How many fifties do you have?")));
-        myBank.setHundreds(Integer.parseInt(JOptionPane.showInputDialog("How many hundreds do you have?")));        
+        myBank.setHundreds(Integer.parseInt(JOptionPane.showInputDialog("How many hundreds do you have?")));
+        //prints out the total amount of money and coin count of the piggy bank    
         System.out.println(myBank.toString());
     }
 }

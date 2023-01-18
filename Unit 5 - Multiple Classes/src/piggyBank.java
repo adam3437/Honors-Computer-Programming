@@ -72,7 +72,7 @@ public class piggyBank
     {
         return hundreds;
     } 
-    //allow for values to be changed using set coin name
+    //allows for values to be changed by user input
     public void setPennies(int thePennies)
     {
         pennies = thePennies;
