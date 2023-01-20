@@ -56,7 +56,11 @@ public class piggyBank
     //toString method to print out the contents of the piggy bank 
     public String contents()
     {
-        return "Pennies: " + pennies + "\nNickels: " + nickels + "\nDimes: " + dimes + "\nQuarters: " + quarters + "\nTotal Value: $" + totalValue() + "\n";
+        return "Pennies: " + pennies + "\nNickels: " + nickels + "\nDimes: " + dimes + "\nQuarters: " + quarters + "\n# of coins: " + coinCount() + "\nTotal Value: $" + totalValue() + "\n";
+    }
+    public double coinCount()
+    {
+        return pennies + nickels + dimes + quarters;
     }
     public double totalValue()
     {
