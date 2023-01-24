@@ -13,7 +13,7 @@ public class vendingMachineTest
         if(cans == null) System.exit(0);
         machine1.fillUp(Integer.parseInt(cans));
         boolean useMachine = true;
-        while(useMachine == true) 
+        while(useMachine) 
         {
         	//checks that there are cans in the machine
         	if(machine1.getCans() == 0) 
