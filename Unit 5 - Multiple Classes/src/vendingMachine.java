@@ -27,7 +27,7 @@ public class vendingMachine
         cans = cans + theCans;
     }
     //tracks the amount of tokens and cans in the machine
-    public void insertToken()
+    public void insertToken(int i)
     {
         tokens = tokens + 1;
         cans = cans--;
