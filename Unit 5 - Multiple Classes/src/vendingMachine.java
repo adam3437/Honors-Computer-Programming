@@ -13,7 +13,6 @@ public class vendingMachine
         cans = theCans;
         tokens = theTokens;
     }
-
     //create accessor methods to get the number of tokens and cans in the machine
     public int getTokens()
     {
@@ -28,7 +27,7 @@ public class vendingMachine
         cans = cans + theCans;
     }
     //tracks the amount of tokens and cans in the machine
-    public void insertToken(int i)
+    public void insertToken()
     {
         tokens = tokens + 1;
         cans = cans--;
