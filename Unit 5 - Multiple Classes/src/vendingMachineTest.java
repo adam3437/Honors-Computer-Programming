@@ -1,4 +1,4 @@
-import javax.swing.*;;
+import javax.swing.*;
 /**
  * This class tests the vendingMachine class.
  * @author Spy_Gaming_TF2
