@@ -2,7 +2,7 @@ import javax.swing.JOptionPane;
 /** 
  * This class creates a piggyBank object and uses the piggyBank class to get the total amount of money and coin count
  * @author Spy_Gaming_TF2
- * 1/19/2022
+ * 1/19/2023
  */
 public class myBank
 {
