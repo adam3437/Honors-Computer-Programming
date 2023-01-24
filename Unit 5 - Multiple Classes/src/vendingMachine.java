@@ -23,15 +23,6 @@ public class vendingMachine
     {
         return cans;
     }
-    //sets number of tokens and cans in the machine
-    public void setTokens(int theTokens)
-    {
-        tokens = theTokens;
-    }
-    public void setCans(int theCans)
-    {
-        cans = theCans;
-    }
     public void fillUp(int theCans)
     {
         cans = cans + theCans;
@@ -40,7 +31,7 @@ public class vendingMachine
     public void insertToken(int i)
     {
         tokens = tokens + 1;
-        cans = cans - 1;
+        cans = cans--;
     }
     //toString method to print out the contents of the vending machine
     public String contents()
