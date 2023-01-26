@@ -34,11 +34,5 @@ public class vendingMachineTest
         		useMachine = false;
         	}
         }
-        System.out.println(machine1.contents());
-        int refill = JOptionPane.showConfirmDialog(null, "Do you want to refill the machine?");
-        if (refill == JOptionPane.YES_OPTION)
-        {
-        	machine1.fillUp(Integer.parseInt(cans));
-        }
     }
 }
