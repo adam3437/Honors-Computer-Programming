@@ -30,7 +30,7 @@ public class vendingMachine
     public void insertToken(int i)
     {
         tokens = tokens + 1;
-        cans = cans--;
+        cans = cans - 1;
     }
     //toString method to print out the contents of the vending machine
     public String contents()
