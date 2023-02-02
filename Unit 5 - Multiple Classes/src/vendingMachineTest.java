@@ -15,6 +15,13 @@ public class vendingMachineTest
         boolean useMachine = true;
         while(useMachine) 
         {
+			//ask user if they want to buy a can
+			int buy = JOptionPane.showConfirmDialog(null, "Do you want to buy a can?");
+			if(buy == 1 || buy == 2)
+			{
+				JOptionPane.showMessageDialog(null, "Goodbye!");
+				break;
+			}
         	//checks that there are cans in the machine
         	if(machine1.getCans() == 0) 
         	{
