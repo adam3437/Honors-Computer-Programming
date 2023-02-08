@@ -17,6 +17,7 @@ public class bankAccount
         this.name = name;
         this.balance = balance;
         this.accountPin = accountPin;
+    }
     public bankAccount(String name, double balance)
     {
         this.name = name;
