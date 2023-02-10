@@ -72,13 +72,13 @@ public class quadraticEquation
     }
     public String getEquation()
     {
-        if(a > 1)
+        if(a == 1)
         {
             return "x^2 + " + b + "x + " + c;
         }
         else
         {
-            return "x^2 + " + b + "x + " + c;
+            return a + "x^2 + " + b + "x + " + c;
         }
     }
 }
