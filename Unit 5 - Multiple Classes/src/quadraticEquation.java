@@ -49,7 +49,7 @@ public class quadraticEquation
     //hasSolution method
     public boolean hasSolution()
     {
-        if (setDiscriminant(0) >= 0)
+        if (Double.isNaN(setDiscriminant(a)))
         {
             return true;
         }
