@@ -8,12 +8,14 @@ public class quadraticEquation
    private double a;
    private double b;
    private double c;
+   private double discriminant;
 
    public quadraticEquation(double a, double b, double c)
    {
        this.a = a;
        this.b = b;
        this.c = c;
+       discriminant = Math.pow(b, 2) - (4 * a * c);
    }
    // Getters
     public double getA()
@@ -28,10 +30,6 @@ public class quadraticEquation
     {
          return c;
     }
-    public double getDiscriminant()
-    {
-        return (b * b) - (4 * a * c);
-    }
     public double setA(double a)
     {
         return this.a = a;
@@ -44,12 +42,43 @@ public class quadraticEquation
     {
         return this.c = c;
     }
+    public double setDiscriminant(double discriminant) 
+    {
+    	return this.discriminant = discriminant;
+    }
+    //hasSolution method
+    public boolean hasSolution()
+    {
+        if (setDiscriminant(0) >= 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    public double getDiscriminant()
+    {
+        return discriminant;
+    }
     public double getRoot1()
     {
-        return (-b + Math.sqrt(getDiscriminant())) / (2 * a);
+        return (-b + Math.sqrt(setDiscriminant(a))) / (2 * a);
     }
     public double getRoot2()
     {
-        return (-b - Math.sqrt(getDiscriminant())) / (2 * a);
+        return (-b - Math.sqrt(setDiscriminant(a))) / (2 * a);
+    }
+    public String getEquation()
+    {
+        if(a > 1)
+        {
+            return "x^2 + " + b + "x + " + c;
+        }
+        else
+        {
+            return "x^2 + " + b + "x + " + c;
+        }
     }
 }
