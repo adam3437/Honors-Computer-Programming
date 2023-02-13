@@ -32,11 +32,10 @@ public class card
         else if (number.equals("K") || number.equals("k")){number = "King";}
         else if (number.equals("A") || number.equals("a")){number = "Ace";}
         //same for suits
-        if (suit.equals("H")){suit = "Hearts";}
+        if (suit.equals("H") || suit.equals("h")){suit = "Hearts";}
         else if (suit.equals("D") || suit.equals("d")){suit = "Diamonds";}
         else if (suit.equals("C") || suit.equals("c")){suit = "Clubs";}
         else if (suit.equals("S") || suit.equals("s")){suit = "Spades";}
-        else if (suit.equals("H") || suit.equals("h")){suit = "Hearts";}
        //returns the card
         return number + " of " + suit;
     }
