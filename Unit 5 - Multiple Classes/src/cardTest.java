@@ -12,10 +12,6 @@ public class cardTest
         System.out.print("Enter the Card Notation: ");
         card card1 = new card(input.next(), input.next());
         System.out.println(card1.getDescription());
-        if (card1.isLegal())
-        {
-            System.out.println("This is a legal card");
-        }
         input.close();
     }
 }
