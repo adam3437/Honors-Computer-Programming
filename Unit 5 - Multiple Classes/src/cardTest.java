@@ -16,10 +16,6 @@ public class cardTest
         {
             System.out.println("This is a legal card");
         }
-        else
-        {
-            System.out.println("This is an illegal card");
-        }
         input.close();
     }
 }

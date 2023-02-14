@@ -36,8 +36,15 @@ public class card
         else if (suit.equals("D") || suit.equals("d")){suit = "Diamonds";}
         else if (suit.equals("C") || suit.equals("c")){suit = "Clubs";}
         else if (suit.equals("S") || suit.equals("s")){suit = "Spades";}
-       //returns the card
-        return number + " of " + suit;
+        //returns the card
+        if(isLegal())
+        {
+            return number + " of " + suit;
+        }
+        else
+        {
+            return "Illegal Card";
+        }
     }
     //checks for illegal cards
     public boolean isLegal()
