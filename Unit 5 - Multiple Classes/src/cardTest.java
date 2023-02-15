@@ -10,8 +10,27 @@ public class cardTest
     {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter the Card Notation: ");
-        card card1 = new card(input.next(), input.next());
-        System.out.println(card1.getDescription());
-        input.close();
+        String card = input.next();
+        int length = card.length();
+        if(length == 2)
+        {
+            String name = card.substring(0,1);
+            String suit = card.substring(1);
+            card card1 = new card(name, suit);
+            System.out.println(card1.getDescription());
+            input.close();
+        }
+        else if(length == 3)
+        {
+            String name = card.substring(0,2);
+            String suit = card.substring(2);
+            card card1 = new card(name, suit);
+            System.out.println(card1.getDescription());
+            input.close();
+        }
+        else if(length > 3) 
+        {
+        	System.out.println("Input Error: Too Many Characters");
+        }
     }
 }
