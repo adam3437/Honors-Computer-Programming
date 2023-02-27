@@ -11,9 +11,9 @@ public class cashierTest
         Scanner scan = new Scanner(System.in);
         cashier register = new cashier(0, 0);
         System.out.println("Enter the amount due: ");
-        double amountDue = scan.nextDouble();
+        double amountDue = Double.parseDouble(scan.next());
         System.out.println("Enter the amount received: ");
-        double amountReceived = scan.nextDouble();
+        double amountReceived = Double.parseDouble(scan.next());
         System.out.println("Change Due: " + register.toString());
         scan.close();
     }
