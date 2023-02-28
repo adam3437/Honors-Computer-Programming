@@ -5,12 +5,13 @@
  */
 public class cashier
 {
-    private double amountDue;
-    private double amountReceived;
-    private double pennies;
-    private double nickels;
-    private double dimes;
-    private double quarters;
+    private final double amountDue;
+    private final double amountReceived;
+    double pennies;
+    double nickels;
+    double dimes;
+    double quarters;
+    double dollars;
 
     //constants
     final double DOLLAR_VALUE = 1.00;
@@ -19,6 +20,11 @@ public class cashier
     final double NICKEL_VALUE = 0.05;
     final double PENNY_VALUE = 0.01;
 
+    /**
+     * This part of the program is what allows the class to be created in another file
+     * @param amountDue
+     * @param amountReceived
+     */
     public cashier(double amountDue, double amountReceived)
     {
         this.amountDue = amountDue;
@@ -29,29 +35,50 @@ public class cashier
     {
         return amountReceived - amountDue;
     }
-    //calculates the number of quarters
+    //use modulus to get the amount of coins & dollars returned
+    public double getDollars()
+    {
+        dollars = getChangeDue() / DOLLAR_VALUE;
+        dollars = (int) dollars;
+        return dollars;
+    }
     public double getQuarters()
     {
-        return getChangeDue() / QUARTER_VALUE;
+        quarters = getChangeDue() % DOLLAR_VALUE;
+        quarters = quarters / QUARTER_VALUE;
+        quarters = (int) quarters;
+        return quarters;
     }
-    //calculates the number of dimes
     public double getDimes()
     {
-        return getChangeDue() / DIME_VALUE;
+        dimes = getChangeDue() % DOLLAR_VALUE;
+        dimes = dimes % QUARTER_VALUE;
+        dimes = dimes / DIME_VALUE;
+        dimes = (int) dimes;
+        return dimes;
     }
-    //calculates the number of nickels
     public double getNickels()
     {
-        return getChangeDue() / NICKEL_VALUE;
+        nickels = getChangeDue() % DOLLAR_VALUE;
+        nickels = nickels % QUARTER_VALUE;
+        nickels = nickels % DIME_VALUE;
+        nickels = nickels / NICKEL_VALUE;
+        nickels = (int) nickels;
+        return nickels;
     }
-    //calculates the number of pennies
     public double getPennies()
     {
-        return getChangeDue() / PENNY_VALUE;
+        pennies = getChangeDue() % DOLLAR_VALUE;
+        pennies = pennies % QUARTER_VALUE;
+        pennies = pennies % DIME_VALUE;
+        pennies = pennies % NICKEL_VALUE;
+        pennies = pennies / PENNY_VALUE;
+        pennies = (int) pennies;
+        return pennies;
     }
     //toString method
     public String toString()
     {
-        return "Amount Due: " + amountDue + "\n" + "Quarters Due" + getQuarters() + "\n" + "Dimes Due" + getDimes() + "\n" + "Nickels Due" + getNickels() + "\n" + "Pennies Due" + getPennies();
+        return "Amount Due: " + amountDue + "\n" + "Dollars Due: " + getDollars() + "\nQuarters Due: " + getQuarters() + "\nDimes Due: " + getDimes() + "\nNickels Due: " + getNickels() + "\nPennies Due: " + getPennies();
     }
 }

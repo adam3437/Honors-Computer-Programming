@@ -9,12 +9,12 @@ public class cashierTest
     public static void main(String[] args)
     {
         Scanner scan = new Scanner(System.in);
-        cashier register = new cashier(0, 0);
-        System.out.println("Enter the amount due: ");
-        double amountDue = Double.parseDouble(scan.next());
-        System.out.println("Enter the amount received: ");
-        double amountReceived = Double.parseDouble(scan.next());
-        System.out.println("Change Due: " + register.toString());
+        System.out.print("Enter the amount due: ");
+        double amountDue = scan.nextDouble();
+        System.out.print("Enter the amount received: ");
+        double amountReceived = scan.nextDouble();
+        cashier cashier1 = new cashier(amountDue, amountReceived);
+        System.out.println(cashier1.toString());
         scan.close();
     }
 }
