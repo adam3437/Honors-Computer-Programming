@@ -21,9 +21,9 @@ public class cashier
     final double PENNY_VALUE = 0.01;
 
     /**
-     * This part of the program is what allows the class to be created in another file
-     * @param amountDue
-     * @param amountReceived
+     * Constructor for objects of class cashier
+     * @param amountDue //the amount due
+     * @param amountReceived //the amount received from the customer
      */
     public cashier(double amountDue, double amountReceived)
     {
