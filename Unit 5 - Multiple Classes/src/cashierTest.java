@@ -14,7 +14,19 @@ public class cashierTest
         System.out.print("Enter the amount received: ");
         double amountReceived = scan.nextDouble();
         cashier cashier1 = new cashier(amountDue, amountReceived);
-        System.out.println(cashier1.toString());
+        //check that amountReceived is greater than amountDue
+        if (amountReceived == amountDue)
+        {
+            System.out.println("No Change Due");
+        }
+        else if(amountReceived < amountDue)
+        {
+            System.out.println("You Need More Money to Purchase This Item");
+        }
+        else
+        {
+            System.out.println(cashier1.toString());
+        }
         scan.close();
     }
 }
