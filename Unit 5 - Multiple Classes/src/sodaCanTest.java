@@ -1,5 +1,7 @@
 /**
  * This class tests the sodaCan class. It takes user input via scanner and then prints the volume and surface area of the can.
+ * @author Spy-Gaming-TF2
+ * 3/06/23
  */
 import java.util.Scanner;
 public class sodaCanTest
