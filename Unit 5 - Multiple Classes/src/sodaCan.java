@@ -3,7 +3,8 @@
  * @author Spy_Gaming_TF2
  * 3/06/23
  */
-public class sodaCan {
+public class sodaCan
+{
     private final double height;
     private final double radius;
 
