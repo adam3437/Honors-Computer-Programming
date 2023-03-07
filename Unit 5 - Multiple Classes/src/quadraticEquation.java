@@ -30,6 +30,18 @@ public class quadraticEquation
     {
          return c;
     }
+    public double setA(double a)
+    {
+        return this.a = a;
+    }
+    public double setB(double b)
+    {
+        return this.b = b;
+    }
+    public double setC(double c)
+    {
+        return this.c = c;
+    }
     public double setDiscriminant(double discriminant) 
     {
     	return this.discriminant = discriminant;
@@ -39,11 +51,11 @@ public class quadraticEquation
     {
         if (Double.isNaN(setDiscriminant(a)))
         {
-            return true;
+            return false;
         }
         else
         {
-            return false;
+            return true;
         }
     }
     public double getDiscriminant()
