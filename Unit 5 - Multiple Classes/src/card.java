@@ -18,27 +18,31 @@ public class card
     public String getDescription()
     {
         //sets cards to numbers and letters
-        if (number.equals("2")){number = "Two";}
-        else if (number.equals("3")){number = "Three";}
-        else if (number.equals("4")){number = "Four";}
-        else if (number.equals("5")){number = "Five";}
-        else if (number.equals("6")){number = "Six";}
-        else if (number.equals("7")){number = "Seven";}
-        else if (number.equals("8")){number = "Eight";}
-        else if (number.equals("9")){number = "Nine";}
-        else if (number.equals("10")){number = "Ten";}
-        else if (number.equals("J") || number.equals("j")){number = "Jack";}
-        else if (number.equals("Q") || number.equals("q")){number = "Queen";}
-        else if (number.equals("K") || number.equals("k")){number = "King";}
-        else if (number.equals("A") || number.equals("a")){number = "Ace";}
+        switch (number) {
+            case "2" -> number = "Two";
+            case "3" -> number = "Three";
+            case "4" -> number = "Four";
+            case "5" -> number = "Five";
+            case "6" -> number = "Six";
+            case "7" -> number = "Seven";
+            case "8" -> number = "Eight";
+            case "9" -> number = "Nine";
+            case "10" -> number = "Ten";
+            case "J", "j" -> number = "Jack";
+            case "Q", "q" -> number = "Queen";
+            case "K", "k" -> number = "King";
+            case "A", "a" -> number = "Ace";
+        }
         //same for suits
-        if (suit.equals("H") || suit.equals("h")){suit = "Hearts";}
-        else if (suit.equals("D") || suit.equals("d")){suit = "Diamonds";}
-        else if (suit.equals("C") || suit.equals("c")){suit = "Clubs";}
-        else if (suit.equals("S") || suit.equals("s")){suit = "Spades";}
+        switch (suit) {
+            case "H", "h" -> suit = "Hearts";
+            case "D", "d" -> suit = "Diamonds";
+            case "C", "c" -> suit = "Clubs";
+            case "S", "s" -> suit = "Spades";
+        }
        //returns the card
-        if (isLegalNumber() == false) { return ("Illegal Number");}
-        else if (isLegalSuit() == false) {return ("Illegal Suit");}
+        if (!isLegalNumber()) { return ("Illegal Number");}
+        else if (!isLegalSuit()) {return ("Illegal Suit");}
         if(isLegalNumber() && isLegalSuit())
         {
             return number + " of " + suit;
@@ -48,18 +52,10 @@ public class card
     //checks for illegal cards
     public boolean isLegalNumber()
     {
-        if (number.equals("Two") || number.equals("Three") || number.equals("Four") || number.equals("Five") || number.equals("Six") || number.equals("Seven") || number.equals("Eight") || number.equals("Nine") || number.equals("Ten") || number.equals("Jack") || number.equals("Queen") || number.equals("King") || number.equals("Ace"))
-        {
-            return true;
-        }
-        return false;
+        return number.equals("Two") || number.equals("Three") || number.equals("Four") || number.equals("Five") || number.equals("Six") || number.equals("Seven") || number.equals("Eight") || number.equals("Nine") || number.equals("Ten") || number.equals("Jack") || number.equals("Queen") || number.equals("King") || number.equals("Ace");
     }
     public boolean isLegalSuit() 
     {
-    	if (suit.equals("Hearts") || suit.equals("Diamonds") || suit.equals("Clubs") || suit.equals("Spades") || suit.equals("Hearts"))
-        {
-    		return true;
-        }
-		return false;
+        return suit.equals("Hearts") || suit.equals("Diamonds") || suit.equals("Clubs") || suit.equals("Spades") || suit.equals("Hearts");
     }
 }
