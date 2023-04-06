@@ -22,25 +22,18 @@ public class quadraticEquation
     {
          return a;
     }
-    public double getB()
+
+    public void setA(double a)
     {
-         return b;
+        this.a = a;
     }
-    public double getC()
+    public void setB(double b)
     {
-         return c;
+        this.b = b;
     }
-    public double setA(double a)
+    public void setC(double c)
     {
-        return this.a = a;
-    }
-    public double setB(double b)
-    {
-        return this.b = b;
-    }
-    public double setC(double c)
-    {
-        return this.c = c;
+        this.c = c;
     }
     public double setDiscriminant(double discriminant) 
     {
@@ -49,14 +42,7 @@ public class quadraticEquation
     //hasSolution method
     public boolean hasSolution()
     {
-        if (Double.isNaN(setDiscriminant(a)))
-        {
-            return false;
-        }
-        else
-        {
-            return true;
-        }
+        return (getDiscriminant() < 0);
     }
     public double getDiscriminant()
     {

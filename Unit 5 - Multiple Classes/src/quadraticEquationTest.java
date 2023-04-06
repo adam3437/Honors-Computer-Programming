@@ -18,18 +18,17 @@ public class quadraticEquationTest
         eq1.setB(input.nextDouble());
         System.out.println("Enter the coefficient for C: ");
         eq1.setC(input.nextDouble());
-        System.out.println("The discriminant is: " + eq1.getDiscriminant());
-        System.out.println("The equation is: " + eq1.getEquation());
         // if the discriminant is greater than 0, the equation has two real roots
         if (eq1.hasSolution())
         {
+            System.out.println("The discriminant is: " + eq1.getDiscriminant());
+            System.out.println("The equation is: " + eq1.getEquation());
             System.out.println("The roots are: " + eq1.getRoot1() + " and " + eq1.getRoot2());
         }
         else
         {
             System.out.println("The equation has no real solutions.");
         }
-        // closes the Scanner object
         input.close();
     }    
 }
