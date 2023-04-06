@@ -56,6 +56,6 @@ public class card
     }
     public boolean isLegalSuit() 
     {
-        return suit.equals("Hearts") || suit.equals("Diamonds") || suit.equals("Clubs") || suit.equals("Spades") || suit.equals("Hearts");
+        return suit.equals("Hearts") || suit.equals("Diamonds") || suit.equals("Clubs") || suit.equals("Spades");
     }
 }
