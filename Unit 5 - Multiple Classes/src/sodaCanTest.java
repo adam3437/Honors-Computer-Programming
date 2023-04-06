@@ -14,7 +14,7 @@ public class sodaCanTest
         System.out.print("Enter the radius of the can: ");
         double radius = scan.nextDouble();
         sodaCan sodaCan1 = new sodaCan(height, radius);
-        System.out.println(sodaCan1);
+        System.out.println("\n" + sodaCan1);
         scan.close();
     }
 }

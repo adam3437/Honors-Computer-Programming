@@ -28,7 +28,7 @@ public class cardTest
             System.out.println(card1.getDescription());
             input.close();
         }
-        else if(length > 3) 
+        else
         {
         	System.out.println("Input Error: Too Many Characters");
         }
