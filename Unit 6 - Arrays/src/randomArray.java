@@ -34,6 +34,6 @@ public class randomArray
         System.out.printf("%nMax: %-3s", Arrays.stream(arr).max().getAsInt());
         System.out.printf("%nMin: %-3s", Arrays.stream(arr).min().getAsInt());
         //finds the median of the array
-        System.out.printf("%nMedian: %-3s", (arr[4] + arr[5]) / 2);
+        System.out.printf("%nMedian: %-3s", (double)(arr[4] + arr[5]) / 2);
     }
 }
