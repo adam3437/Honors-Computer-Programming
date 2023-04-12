@@ -1,7 +1,7 @@
 /**
  * Creates an array with random numbers and prints the array in ascending order
  * @author S26600283 (Adam Chavez)
- * 4/11/2023
+ * 4/12/2023
  */
 import java.util.Arrays;
 import java.util.Random;
@@ -29,9 +29,11 @@ public class randomArray
             arr[arr.length - i - 1] = temp;
         }
         System.out.printf("%nDescending Order: %-3s", Arrays.toString(arr));
-        //finds the sum, max, min, and median of the array
+        //finds the sum, max,and min of the array
         System.out.printf("%nSum: %-3s", Arrays.stream(arr).sum());
         System.out.printf("%nMax: %-3s", Arrays.stream(arr).max().getAsInt());
         System.out.printf("%nMin: %-3s", Arrays.stream(arr).min().getAsInt());
+        //finds the median of the array
+        System.out.printf("%nMedian: %-3s", (arr[4] + arr[5]) / 2);
     }
 }
