@@ -1,6 +1,6 @@
 /**
  * Creates an array with random numbers and prints the array in ascending order
- * @author S26600283 (Adam Chavez)
+ * @author Spy-Gaming-TF2
  * 4/12/2023
  */
 import java.util.Arrays;
@@ -11,7 +11,6 @@ public class randomArray
     {
         int[] arr = new int[10];
         Random rand = new Random();
-
         for (int i = 0; i < arr.length; i++)
         {
             arr[i] = rand.nextInt(200)+1;
