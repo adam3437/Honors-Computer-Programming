@@ -7,18 +7,18 @@ public class cashier
 {
     private final double amountDue;
     private final double amountReceived;
-    double pennies;
-    double nickels;
-    double dimes;
-    double quarters;
-    double dollars;
+    private double pennies;
+    private double nickels;
+    private double dimes;
+    private double quarters;
+    private double dollars;
 
     //constants
-    final double DOLLAR_VALUE = 1.00;
-    final double QUARTER_VALUE = 0.25;
-    final double DIME_VALUE = 0.10;
-    final double NICKEL_VALUE = 0.05;
-    final double PENNY_VALUE = 0.01;
+    private static final double DOLLAR_VALUE = 1.0;
+    private static final double QUARTER_VALUE = 0.25;
+    private static final double DIME_VALUE = 0.1;
+    private static final double NICKEL_VALUE = 0.05;
+    private static final double PENNY_VALUE = 0.01;
 
     /**
      * Constructor for objects of class cashier
@@ -30,50 +30,35 @@ public class cashier
         this.amountDue = amountDue;
         this.amountReceived = amountReceived;
     }
-    //calculates the change due
-    public double getChangeDue()
-    {
-        return amountReceived - amountDue;
-    }
-    //use modulus to get the amount of coins & dollars returned
+    //calculate the change due and use modulus to get the remainder
     public double getDollars()
     {
-        dollars = getChangeDue() / DOLLAR_VALUE;
-        dollars = (int) dollars;
+        dollars = (int) ((amountReceived - amountDue) * DOLLAR_VALUE);
+        dollars = Math.round(dollars);
         return dollars;
     }
     public double getQuarters()
     {
-        quarters = getChangeDue() % DOLLAR_VALUE;
-        quarters = quarters / QUARTER_VALUE;
-        quarters = (int) quarters;
+        quarters = ((amountReceived - amountDue) * DOLLAR_VALUE) % DOLLAR_VALUE / QUARTER_VALUE;
+        quarters = Math.round(quarters);
         return quarters;
     }
     public double getDimes()
     {
-        dimes = getChangeDue() % DOLLAR_VALUE;
-        dimes = dimes % QUARTER_VALUE;
-        dimes = dimes / DIME_VALUE;
-        dimes = (int) dimes;
+        dimes = ((amountReceived - amountDue) * DOLLAR_VALUE) % DOLLAR_VALUE % QUARTER_VALUE / DIME_VALUE;
+        dimes = Math.round(dimes);
         return dimes;
     }
     public double getNickels()
     {
-        nickels = getChangeDue() % DOLLAR_VALUE;
-        nickels = nickels % QUARTER_VALUE;
-        nickels = nickels % DIME_VALUE;
-        nickels = nickels / NICKEL_VALUE;
-        nickels = (int) nickels;
+        nickels = ((amountReceived - amountDue) * DOLLAR_VALUE) % DOLLAR_VALUE % QUARTER_VALUE % DIME_VALUE / NICKEL_VALUE;
+        nickels = Math.round(nickels);
         return nickels;
     }
     public double getPennies()
     {
-        pennies = getChangeDue() % DOLLAR_VALUE;
-        pennies = pennies % QUARTER_VALUE;
-        pennies = pennies % DIME_VALUE;
-        pennies = pennies % NICKEL_VALUE;
-        pennies = pennies / PENNY_VALUE;
-        pennies = (int) pennies;
+        pennies = ((amountReceived - amountDue) * DOLLAR_VALUE) % DOLLAR_VALUE % QUARTER_VALUE % DIME_VALUE % NICKEL_VALUE / PENNY_VALUE;
+        pennies = Math.round(pennies);
         return pennies;
     }
     //toString method
