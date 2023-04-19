@@ -30,8 +30,8 @@ public class randomArray
         System.out.printf("%nDescending Order: %-3s", Arrays.toString(arr));
         //finds the sum, max,and min of the array
         System.out.printf("%nSum: %-3s", Arrays.stream(arr).sum());
-        System.out.printf("%nMax: %-3s", Arrays.stream(arr).max().getAsInt());
-        System.out.printf("%nMin: %-3s", Arrays.stream(arr).min().getAsInt());
+        System.out.printf("%nMax: %-3s", arr[0]);
+        System.out.printf("%nMin: %-3s", arr[9]);
         //finds the median of the array
         System.out.printf("%nMedian: %-3s", (double)(arr[4] + arr[5]) / 2);
     }
