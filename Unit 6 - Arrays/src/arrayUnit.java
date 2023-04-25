@@ -1,6 +1,6 @@
 /**
  * Makes an array with one element for each possible outcome. Set each element to 0. Then keep calling the random number generator.
- * If it returns a value v, then increment the counter belonging to v. Extended Learning: print out the % for each index.
+ * If it returns a value v, then increment the counter belonging to v.
  * @author Spy-Gaming-TF2
  * 4/19/2023
  */
