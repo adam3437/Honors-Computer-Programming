@@ -7,7 +7,6 @@
  * @author Spy-Gaming-TF2
  * 4/25/2023
  */
-import java.util.Random;
 import java.util.Scanner;
 public class multipleChoiceQuiz
 {
@@ -22,38 +21,33 @@ public class multipleChoiceQuiz
         String[] dAns = {"1945", "George W. Bush", "1989", "November 2016", "South Sudan"};
         //answer key
         String[] ansKey = {"a", "c", "d", "b", "d"};
-        boolean quizRun = true;
         Scanner scan = new Scanner(System.in);
         int correct = 0;
         int incorrect = 0;
-        while(quizRun)
+        //for loop to print out the questions and answers
+        for(int i=0; i<questions.length; i++)
         {
-            //randomly picks a question
-            Random rand = new Random();
-            int random = rand.nextInt(questions.length);
-            System.out.println(questions[random]+"\nA: "+aAns[random]+"\nB: "+bAns[random]+"\nC: "+cAns[random]+"\nD: "+dAns[random]);
-            System.out.print("Enter your answer: ");
-            String ans = scan.nextLine();
-            //checks if the answer is correct
-            if(ans.equalsIgnoreCase(ansKey[random]))
+            System.out.println(questions[i]);
+            System.out.println("A. " + aAns[i]);
+            System.out.println("B. " + bAns[i]);
+            System.out.println("C. " + cAns[i]);
+            System.out.println("D. " + dAns[i]);
+            System.out.print("Answer: ");
+            String answer = scan.nextLine();
+            //if statement to check if the answer is correct
+            if(answer.equalsIgnoreCase(ansKey[i]))
             {
-                System.out.println("Correct!");
+                System.out.println("Correct");
                 correct++;
             }
             else
             {
-                System.out.println("Incorrect. The right answer is: "+ansKey[random]);
+                System.out.println("Incorrect. The right answer is: " + ansKey[i]);
                 incorrect++;
             }
-            //end the quiz when all elements of the question array has been used
-            if(correct+incorrect == questions.length)
-            {
-                System.out.println("You got "+correct+" correct and "+incorrect+" incorrect.");
-                System.out.println("You got "+(correct*100/questions.length)+"% correct.");
-                System.out.println("Thanks for playing!");
-                quizRun = false;
-            }
         }
+        double percent = (double)correct / (correct + incorrect) * 100;
+        System.out.println("You got " + correct + " correct and " + incorrect + " incorrect. That's " + percent + "% correct.");
         scan.close();
     }
 }
