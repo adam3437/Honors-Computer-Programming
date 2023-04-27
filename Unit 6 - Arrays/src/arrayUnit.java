@@ -19,11 +19,11 @@ public class arrayUnit
         System.out.print("How long should the array be? ");
         int length = scan.nextInt();
         int[] arr = new int[length];
-        //picks random ints that were generated to store in the array
-        for (int i = 0; i < num; i++)
+        //picks random ints that were generated to store in the array from 1 to the number inputted
+        for (int i=1; i <= num; i++)
         {
-            int random = rand.nextInt(length);
-            arr[random]++;
+            int randNum = rand.nextInt(length)+1;
+            arr[randNum-1]++;
         }
         System.out.println(Arrays.toString(arr));
         scan.close();
