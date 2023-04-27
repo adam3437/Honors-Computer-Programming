@@ -14,9 +14,9 @@ public class arrayUnit
         Scanner scan = new Scanner(System.in);
         Random rand = new Random();
         //asks the user how many numbers they want to generate
-        System.out.print("How many numbers do you want to generate? ");
+        System.out.print("Range of numbers you want to generate: ");
         int num = scan.nextInt();
-        System.out.print("How long should the array be? ");
+        System.out.print("Length of the array: ");
         int length = scan.nextInt();
         int[] arr = new int[length];
         //picks random ints that were generated to store in the array from 1 to the number inputted
@@ -24,6 +24,10 @@ public class arrayUnit
         {
             int randNum = rand.nextInt(length)+1;
             arr[randNum-1]++;
+            if(arr[randNum] == 0)
+            {
+                arr[i]++;
+            }
         }
         System.out.println(Arrays.toString(arr));
         scan.close();
