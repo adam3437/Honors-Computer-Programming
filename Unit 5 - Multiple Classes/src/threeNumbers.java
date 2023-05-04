@@ -15,6 +15,19 @@ public class threeNumbers
 		y = num2;
 		z = num3;
 	}
+
+    public double getNumOne()
+    {
+        return num1;
+    }
+    public double getNumTwo()
+    {
+        return num2;
+    }
+    public double getNumThree()
+    {
+        return num3;
+    }
 	public double getSmallest() 
 	{
 		if (num1 < num2 && num1 < num3)
