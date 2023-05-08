@@ -9,7 +9,7 @@ public class multiplicationTable
     public static void main(String[] args)
     {
         int[][] table = new int[12][12];
-        //fill the array with multiplication table values without nested for loops
+        //fill the array with a multiplication table
         for(int i = 0; i < table.length; i++)
         {
             Arrays.fill(table[i], i + 1);
