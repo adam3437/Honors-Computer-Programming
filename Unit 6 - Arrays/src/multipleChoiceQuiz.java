@@ -4,7 +4,7 @@
  * The program should ask the user a question and then display the 3 possible answers.
  * If they answer correctly, print out "Correct". If they are incorrect, print out "Incorrect. The right answer is: ".
  * Display the number of correct & incorrect answers at the end along with the percent correct.
- * @author Spy-Gaming-TF2
+ * @author adam3437
  * 4/25/2023
  */
 import java.util.Scanner;

@@ -1,6 +1,6 @@
 /**
  * Uses a 2d array to print a multiplication table
- * @author Spy-Gaming-TF2
+ * @author adam3437
  * 5/4/23
  */
 import java.util.Arrays;

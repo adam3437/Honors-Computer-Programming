@@ -1,6 +1,6 @@
 /**
  * Creates an array with random numbers and prints the array in ascending order. Prints out sum, min, max, and median of the array
- * @author Spy-Gaming-TF2
+ * @author adam3437
  * 4/12/2023
  */
 import java.util.Arrays;
