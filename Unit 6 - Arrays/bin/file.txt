@@ -1,0 +1,1 @@
+This file does nothing. It's only here to keep the folder structure consistent throughout the repository
