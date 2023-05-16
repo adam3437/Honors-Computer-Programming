@@ -33,8 +33,8 @@ public class TicTacToeTest
          // make a move
          game.set(row, column, player);
          // toggle the player
-         if (player == 'X') {player = 'O';}
-         else {player = 'X';}
+         if (player == 'x') {player = 'o';}
+         else {player = 'x';}
       }
    }
 }

@@ -46,17 +46,17 @@ public void set(int i, int j, char player)
 *********************************************************/
 public String toString( )
 {
-   String r = "";
+   StringBuilder r = new StringBuilder();
    for (int i = 0; i < ROWS; i++)
    {
-      r = r + "|";
+      r.append("|");
       for (int j = 0; j < COLUMNS; j++)
       {
-         r = r + board[i][j];
+         r.append(board[i][j]);
       }
-      r = r + "|\n";
+      r.append("|\n");
    }
-   return r;
+   return r.toString();
 }
 
 private char[ ][ ] board;
