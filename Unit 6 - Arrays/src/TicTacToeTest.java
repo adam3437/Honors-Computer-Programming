@@ -16,21 +16,18 @@ public class TicTacToeTest
          System.out.println(game);                     // calls game.toString( )
          
          String input = JOptionPane.showInputDialog("Row for " + player + " (Cancel to exit)");
-         
-         if (input == null)               // quit the game?
-            System.exit(0);
+         // quit the game?
+         if (input == null) {System.exit(0);}
          int row = Integer.parseInt(input);
          
          input = JOptionPane.showInputDialog("Column for " + player);
          int column = Integer.parseInt(input);
          
          game.set(row, column, player);   // make a move
-         
- 
-         if (player == 'x')               // toggle the player
-            player = 'o';
-         else
-            player = 'x';
+
+         // toggle the player
+         if (player == 'x') {player = 'o';}
+         else{player = 'x';}
       }
    }
 }

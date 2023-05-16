@@ -51,7 +51,9 @@ public String toString( )
    {
       r = r + "|";
       for (int j = 0; j < COLUMNS; j++)
+      {
          r = r + board[i][j];
+      }
       r = r + "|\n";
    }
    return r;
