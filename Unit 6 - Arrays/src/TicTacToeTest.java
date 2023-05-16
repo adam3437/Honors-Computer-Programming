@@ -1,34 +1,40 @@
+/**
+ * This program tests the TicTacToe class by prompting the user to set positions on the board and printing out the result.
+ * @author adam3437
+ * 5/16/23
+ */
 import javax.swing.JOptionPane;
-
-/***************************************************************
-   This program tests the TicTacToe class by prompting the user
-   to set positions on the board and printing out the result.
-****************************************************************/
 public class TicTacToeTest
 {
    public static void main(String[] args)
    {
-      char player = 'x';                  // X gets the first move
-      
-      TicTacToe game = new TicTacToe( );
-      while (true)
-      {
-         System.out.println(game);                     // calls game.toString( )
-         
+      // X gets the first move
+      char player = 'x';
+
+      TicTacToe game = new TicTacToe();
+      while (true) {
+         // calls game.toString( )
+         System.out.println(game);
+
          String input = JOptionPane.showInputDialog("Row for " + player + " (Cancel to exit)");
          // quit the game?
-         if (input == null) {System.exit(0);}
+         if (input == null) {
+            System.exit(0);
+         }
          int row = Integer.parseInt(input);
-         
+         //adjust for zero indexing
+         row = row - 1;
+
          input = JOptionPane.showInputDialog("Column for " + player);
          int column = Integer.parseInt(input);
-         
-         game.set(row, column, player);   // make a move
+         // adjust for zero indexing
+         column = column - 1;
 
+         // make a move
+         game.set(row, column, player);
          // toggle the player
-         if (player == 'x') {player = 'o';}
-         else{player = 'x';}
+         if (player == 'X') {player = 'O';}
+         else {player = 'X';}
       }
    }
 }
-

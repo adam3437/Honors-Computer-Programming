@@ -1,7 +1,7 @@
 /**
- * A 3 x 3 Tic Tac Toe Board
+ * Behind the scenes stuff for a Tic Tac Toe game
  * @author adam3437
- * 5/10/23
+ * 5/16/23
  */
 public class TicTacToe
 {
